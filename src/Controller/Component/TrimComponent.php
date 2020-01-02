@@ -27,7 +27,7 @@ class TrimComponent extends Component {
                 return is_string($d) ? trim($d) : $d;
             }, $data);
             foreach ($newData as $key => $value) {
-                $request = $request->withData($name, $value);
+                $request = $request->withData($key, $value);
             }
         }
         $queryParams = $request->getQueryParams();
